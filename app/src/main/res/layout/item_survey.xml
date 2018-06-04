@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="40dp"
+  android:paddingEnd="35dp"
+  android:paddingStart="35dp">
+
+  <TextView
+    android:id="@+id/tv_item_survey_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_rounded_background_selector"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:lines="2"
+    android:paddingBottom="25dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="25dp"
+    android:textColor="@color/commonBtnTextColor"
+    android:textSize="20dp"
+    tools:ignore="SpUsage"
+    tools:text="Survey for\nFreight Hauling activities" />
+</RelativeLayout>

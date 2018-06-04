@@ -1,0 +1,78 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:paddingBottom="30dp"
+  android:paddingEnd="35dp"
+  android:paddingStart="35dp"
+  android:paddingTop="25dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <requestFocus/>
+  </LinearLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/tv_best_survey_form_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textColor="@android:color/black"
+      android:textSize="24dp"
+      tools:ignore="SpUsage"
+      tools:text="Survey for Unloading activities"/>
+
+    <ImageView
+      android:id="@+id/iv_best_survey_form_close"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:src="@drawable/ic_close"/>
+  </RelativeLayout>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rcv_best_survey_form_content"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginBottom="25dp"
+    android:layout_marginTop="25dp"
+    android:layout_weight="1"
+    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+    tools:listitem="@layout/item_survey_form_block"/>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+      android:id="@+id/btn_best_survey_form_submit"
+      android:layout_width="245dp"
+      android:layout_height="wrap_content"
+      android:background="@drawable/common_rounded_background_selector"
+      android:text="@string/survey_submit"
+      android:textColor="@color/commonBtnTextColor"
+      android:textSize="20dp"
+      tools:ignore="SpUsage"/>
+
+    <Button
+      android:id="@+id/btn_best_survey_form_cancel"
+      android:layout_width="186dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/common_rounded_background_grey_selector"
+      android:text="@string/common_cancel"
+      android:textColor="@color/commonBtnTextColor"
+      android:textSize="20dp"
+      tools:ignore="SpUsage"/>
+  </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  style="@style/survey_form_question_layout">
+
+  <TextView
+    android:id="@+id/tv_view_survey_form_question_title"
+    style="@style/survey_form_question_title"
+    tools:text="1. Please rate the quality of service"/>
+
+  <RadioGroup
+    android:id="@+id/rg_view_survey_form_question_answers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+  <RelativeLayout
+    android:id="@+id/rl_view_survey_form_question_other_answer"
+    style="@style/survey_form_question_other_answer_rl"
+    tools:visibility="visible">
+
+    <EditText
+      android:id="@+id/edt_view_survey_form_question_other_answer"
+      style="@style/survey_form_question_answer_edt"/>
+
+    <ImageView
+      android:id="@+id/btn_view_survey_form_question_clear_answer"
+      style="@style/survey_form_question_clear_answer"/>
+  </RelativeLayout>
+</LinearLayout>

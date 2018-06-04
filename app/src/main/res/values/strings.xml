@@ -1,0 +1,29 @@
+<resources>
+  <string name="server_error_message">Sorry, it seems that there has been an error. Please try again</string>
+  <string name="server_message_success">Success</string>
+  <string name="server_message_fail">Fail</string>
+
+  <string name="common_confirm_title">Confirm</string>
+  <string name="common_cancel">Cancel</string>
+  <string name="common_yes">Yes</string>
+  <string name="common_close">Close</string>
+
+  <string name="login_app_version">Version %1$s</string>
+  <string name="login_username_hint">Username</string>
+  <string name="login_password_hint">Password</string>
+  <string name="login_btn_text">Login</string>
+  <string name="login_error_empty_username">Please enter username</string>
+  <string name="login_error_empty_password">Please enter password</string>
+
+  <string name="home_label_location">Location: %1$s</string>
+  <string name="home_feature_driver_check_in">Driver Check In</string>
+  <string name="home_feature_best_survey">Best survey</string>
+
+  <string name="best_survey_title">Best Survey</string>
+  <string name="survey_search_hint">Search by template title</string>
+  <string name="survey_submit">Submit</string>
+  <string name="survey_submit_required">Please answer all questions</string>
+  <string name="survey_cancel">Are you sure you want to cancel this survey?</string>
+  <string name="survey_submit_success">Your survey is submitted</string>
+  <string name="survey_submit_offline">Will retry submit your survey when network connected</string>
+</resources>

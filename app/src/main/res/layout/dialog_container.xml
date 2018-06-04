@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@android:color/transparent"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/dialog_container_title_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_corner_top_only_bg_orange"
+    android:fontFamily="sans-serif"
+    android:gravity="center"
+    android:letterSpacing="0.03"
+    android:padding="10dp"
+    android:textColor="@android:color/white"
+    android:textSize="18sp"
+    android:textStyle="normal"
+    tools:text="Thông báo"
+    />
+
+  <LinearLayout
+    android:id="@+id/dialog_container_content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"/>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#dddddd"/>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_corner_bottom_only_bg_white"
+    android:paddingBottom="11dp"
+    android:paddingTop="13dp">
+
+    <LinearLayout
+      android:id="@+id/dialog_container_multi_button_ll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingEnd="24dp"
+      android:paddingStart="24dp">
+
+      <TextView
+        android:id="@+id/dialog_container_negative_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border_rounded_bg_orange"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:padding="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="Huỷ"
+        />
+
+      <View
+        android:layout_width="24dp"
+        android:layout_height="1dp"/>
+
+      <TextView
+        android:id="@+id/dialog_container_positive_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/common_rounded_background_selector"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:padding="8dp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="Nạp tiền"
+        />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/dialog_container_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:background="@drawable/common_rounded_background_selector"
+      android:fontFamily="sans-serif"
+      android:gravity="center"
+      android:letterSpacing="0.02"
+      android:minWidth="200dp"
+      android:padding="8dp"
+      android:paddingEnd="10dp"
+      android:paddingStart="10dp"
+      android:textAllCaps="true"
+      android:textColor="@android:color/white"
+      android:textSize="14sp"
+      android:textStyle="normal"
+      tools:text="Nạp tiền"
+      />
+  </RelativeLayout>
+</LinearLayout>

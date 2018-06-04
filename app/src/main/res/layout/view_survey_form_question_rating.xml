@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  style="@style/survey_form_question_layout">
+
+  <TextView
+    android:id="@+id/tv_view_survey_form_question_title"
+    style="@style/survey_form_question_title"
+    tools:text="1. Please rate the quality of service"/>
+
+  <RatingBar
+    android:id="@+id/rating_bar_view_survey_form_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stepSize="1"
+    android:layout_marginStart="20dp"/>
+</LinearLayout>

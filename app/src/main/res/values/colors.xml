@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#5f8ece</color>
+  <color name="colorPrimaryDark">#3364a7</color>
+  <color name="colorAccent">#f58220</color>
+
+  <color name="kioskColor">#5f8ece</color>
+  <color name="kioskColorDark">#3364a7</color>
+  <color name="commonOrange">#f58220</color>
+  <color name="commonOrangeDark">#b95908</color>
+  <color name="commonBtnGrey">#c6c6c4</color>
+  <color name="commonBtnGreyDark">#a5a5a1</color>
+
+  <color name="commonTextColor">#4d4d4d</color>
+  <color name="commonBtnTextColor">#fffefe</color>
+</resources>

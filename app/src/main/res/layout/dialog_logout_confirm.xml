@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/dialog_content_input_otp_description_tv"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@android:color/white"
+  android:fontFamily="sans-serif-medium"
+  android:letterSpacing="0.03"
+  android:padding="@dimen/layout_margin"
+  android:text="Bạn muốn đăng xuất?"
+  android:textColor="#4a4a4a"
+  android:textSize="16sp"
+  android:textStyle="normal"
+/>

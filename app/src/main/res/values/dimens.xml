@@ -1,0 +1,5 @@
+<resources>
+  <dimen name="layout_margin">15dp</dimen>
+
+  <dimen name="size_common_background_corners_radius">5dp</dimen>
+</resources>

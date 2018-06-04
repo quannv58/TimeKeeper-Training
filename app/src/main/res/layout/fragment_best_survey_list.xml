@@ -1,0 +1,139 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+      style="@style/common_logo_image"
+      tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginBottom="20dp"
+      android:layout_marginEnd="33dp"
+      android:layout_marginTop="20dp"
+      android:gravity="end"
+      android:orientation="vertical">
+
+      <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:textColor="@color/commonTextColor"
+        android:textSize="30dp"
+        tools:ignore="SpUsage"
+        tools:text="03:00 AM"/>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tv_best_survey_list_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/commonTextColor"
+          android:textSize="18dp"
+          tools:ignore="SpUsage"
+          tools:text="Location: Demo US"/>
+
+        <TextView
+          android:id="@+id/tv_best_survey_list_shift_and_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:fontFamily="@font/sfui_display_regular"
+          android:textColor="@color/commonTextColor"
+          android:textSize="18dp"
+          tools:ignore="SpUsage"
+          tools:text="Shift 1. Nov 29"/>
+      </LinearLayout>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+    android:background="@color/commonOrange"/>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingBottom="20dp"
+      android:paddingEnd="35dp"
+      android:paddingStart="35dp"
+      android:paddingTop="20dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/sfui_display_semibold"
+        android:text="@string/best_survey_title"
+        android:textAllCaps="true"
+        android:textColor="#434343"
+        android:textSize="24dp"
+        tools:ignore="SpUsage"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_search_rounded_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:src="@drawable/ic_search"
+          tools:ignore="ContentDescription"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+          android:id="@+id/edt_best_survey_list_search"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="9dp"
+          android:layout_marginStart="9dp"
+          android:fontFamily="@font/sfui_display_regular"
+          android:hint="@string/survey_search_hint"
+          android:imeOptions="actionDone"
+          android:inputType="text"
+          android:lines="1"
+          android:paddingBottom="10dp"
+          android:paddingTop="10dp"
+          android:textColorHint="#878787"
+          android:textSize="18dp"
+          app:met_clearButton="true"
+          app:met_hideUnderline="true"
+          tools:ignore="SpUsage"/>
+      </LinearLayout>
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+      android:id="@+id/srcv_best_survey_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+    <!--app:layoutManager="GridLayoutManager"-->
+    <!--app:spanCount="3"-->
+    <!--tools:listitem="@layitem_surveyrvey"/>-->
+  </LinearLayout>
+</LinearLayout>
