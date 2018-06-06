@@ -2,13 +2,11 @@ package com.gem.timekeeper.screen.main.home;
 
 import android.os.Bundle;
 
-import com.gem.timekeeper.data.dto.SurveyListDTO;
 import com.gem.timekeeper.data.dto.LocationDTO;
-import com.gem.timekeeper.data.remote.callback.CommonQueryCallback;
-import com.gem.timekeeper.data.remote.callback.SimpleQueryResponse;
+import com.gem.timekeeper.data.remote.callback.BaseResponse;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gem.timekeeper.eventbus.SettingUpdateEvent;
 import com.gem.timekeeper.pref.PrefWrapper;
-import com.gem.timekeeper.realm.RealmController;
 import com.gem.timekeeper.screen.SubActivity;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
@@ -50,9 +48,9 @@ public class HomePresenter extends Presenter<HomeContract.View, HomeContract.Int
   }
 
   private void getLocationSetting() {
-    mInteractor.getLocationSetting(new CommonQueryCallback<LocationDTO>(getViewContext()) {
+    mInteractor.getLocationSetting(new CommonCallback<LocationDTO>(getViewContext()) {
       @Override
-      public void onSuccess(SimpleQueryResponse<LocationDTO> responseBody) {
+      public void onSuccess(BaseResponse<LocationDTO> responseBody) {
         PrefWrapper.saveLocationSetting(getViewContext(), responseBody.getData());
         EventBusWrapper.post(new SettingUpdateEvent(SettingUpdateEvent.Type.LOCATION));
       }

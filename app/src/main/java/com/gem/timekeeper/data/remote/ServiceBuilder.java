@@ -44,21 +44,21 @@ public class ServiceBuilder {
         .connectTimeout(90, TimeUnit.SECONDS)
         .addInterceptor(interceptor)
         .addInterceptor(new Interceptor() {
-          // User agent default
+          // UserModel agent default
           @Override
           public Response intercept(Chain chain) throws IOException {
             Request original = chain.request();
 
             // Build request with headers
             Request.Builder builder = original.newBuilder()
-                .header("User-Agent", System.getProperty("http.agent"))
+                .header("UserModel-Agent", System.getProperty("http.agent"))
 //                .header("USER-TOKEN", userToken)
                 .header("Content-Type", "application/json")
                 .method(original.method(), original.body());
 
             UserDTO userDTO = PrefWrapper.getUser(App.getInstance());
-            if (userDTO != null && !StringUtils.isEmpty(userDTO.getAccessToken())) {
-              builder.header("Authorization", userDTO.getTokenType() + " " + userDTO.getAccessToken());
+            if (userDTO != null && !StringUtils.isEmpty(userDTO.getToken())) {
+              builder.header("Authorization", userDTO.getToken());
             }
 
             return chain.proceed(builder.build());

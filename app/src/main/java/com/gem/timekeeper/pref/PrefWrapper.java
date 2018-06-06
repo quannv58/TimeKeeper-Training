@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.gem.timekeeper.data.dto.LocationDTO;
+import com.gem.timekeeper.data.dto.UserDTO;
 import com.gemvietnam.utils.StringUtils;
 import com.google.gson.Gson;
-import com.gem.timekeeper.data.dto.UserDTO;
 
 /**
  * Shared Preferences wrapper
@@ -27,7 +27,7 @@ public class PrefWrapper {
   }
 
   /**
-   * Save User as json
+   * Save UserModel as json
    */
   public static synchronized void saveUser(Context context, UserDTO user) {
     String userJson = new Gson().toJson(user);
@@ -37,7 +37,7 @@ public class PrefWrapper {
   }
 
   /**
-   * Get User from saved json
+   * Get UserModel from saved json
    */
   public static synchronized UserDTO getUser(Context context) {
     String userJson = getPreference(context).getString(KEY_USER, null);

@@ -2,7 +2,7 @@ package com.gem.timekeeper.data.remote.services;
 
 
 import com.gem.timekeeper.data.dto.UserDTO;
-import com.gem.timekeeper.data.remote.callback.SimpleQueryResponse;
+import com.gem.timekeeper.data.remote.callback.BaseResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -33,6 +33,6 @@ public interface CommonService {
                              @Field("refresh_token") String refreshToken);
 
   @GET("queries/Merit.Components.Surveys.Queries/SurveyQueries/RegisterDeviceNotificationForKios/results")
-  Call<SimpleQueryResponse<Boolean>> registerDeviceToken(@Query("deviceToken") String deviceToken,
-                                                            @Query("deviceType") int deviceType);
+  Call<BaseResponse<Boolean>> registerDeviceToken(@Query("deviceToken") String deviceToken,
+                                                  @Query("deviceType") int deviceType);
 }

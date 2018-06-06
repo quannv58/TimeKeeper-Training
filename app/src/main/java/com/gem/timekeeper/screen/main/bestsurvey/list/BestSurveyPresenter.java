@@ -5,8 +5,8 @@ import android.support.annotation.NonNull;
 
 import com.gem.timekeeper.data.dto.SurveyDTO;
 import com.gem.timekeeper.data.dto.SurveyListDTO;
-import com.gem.timekeeper.data.remote.callback.CommonQueryCallback;
-import com.gem.timekeeper.data.remote.callback.SimpleQueryResponse;
+import com.gem.timekeeper.data.remote.callback.BaseResponse;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gem.timekeeper.eventbus.SettingUpdateEvent;
 import com.gem.timekeeper.pref.PrefWrapper;
 import com.gem.timekeeper.realm.RealmController;
@@ -61,9 +61,9 @@ public class BestSurveyPresenter extends Presenter<BestSurveyContract.View, Best
 
   private void getSurveyList() {
     mView.showProgress();
-    mInteractor.getSurveyList(new CommonQueryCallback<SurveyListDTO>(getViewContext()) {
+    mInteractor.getSurveyList(new CommonCallback<SurveyListDTO>(getViewContext()) {
       @Override
-      public void onSuccess(SimpleQueryResponse<SurveyListDTO> responseBody) {
+      public void onSuccess(BaseResponse<SurveyListDTO> responseBody) {
         RealmController.getInstance().saveSurveyList(responseBody.getData().getSurveyList());
         EventBusWrapper.post(new SettingUpdateEvent(SettingUpdateEvent.Type.SURVEY));
         super.onSuccess(responseBody);

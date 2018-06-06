@@ -1,32 +1,19 @@
 
-package com.gem.timekeeper.data.dto;
+package com.gem.timekeeper.model;
 
-import java.io.Serializable;
+public class UserModel {
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-public class UserDTO implements Serializable {
-
-  @SerializedName("id")
-  @Expose
   private int id;
-  @SerializedName("username")
-  @Expose
+
   private String username;
-  @SerializedName("email")
-  @Expose
+
   private String email;
-  @SerializedName("status")
-  @Expose
+
   private String status;
-  @SerializedName("token")
-  @Expose
+
   private String token;
-  @SerializedName("role")
-  @Expose
+
   private String role;
-  private final static long serialVersionUID = 3996904098422696984L;
 
   public int getId() {
     return id;

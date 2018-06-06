@@ -1,9 +1,9 @@
 package com.gem.timekeeper.screen.authentication.login;
 
+import com.gem.timekeeper.data.dto.UserDTO;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
-import com.gem.timekeeper.data.dto.UserDTO;
 
 import retrofit2.Callback;
 

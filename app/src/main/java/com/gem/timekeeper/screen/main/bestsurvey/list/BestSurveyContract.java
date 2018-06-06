@@ -3,7 +3,7 @@ package com.gem.timekeeper.screen.main.bestsurvey.list;
 import com.gem.timekeeper.data.dto.LocationDTO;
 import com.gem.timekeeper.data.dto.SurveyDTO;
 import com.gem.timekeeper.data.dto.SurveyListDTO;
-import com.gem.timekeeper.data.remote.callback.CommonQueryCallback;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
 import com.gemvietnam.base.viper.interfaces.PresentView;
@@ -16,7 +16,7 @@ import java.util.List;
 interface BestSurveyContract {
 
   interface Interactor extends IInteractor<Presenter> {
-    void getSurveyList(CommonQueryCallback<SurveyListDTO> callback);
+    void getSurveyList(CommonCallback<SurveyListDTO> callback);
   }
 
   interface View extends PresentView<Presenter> {

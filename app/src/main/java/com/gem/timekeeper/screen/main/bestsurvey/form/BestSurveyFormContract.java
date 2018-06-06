@@ -1,7 +1,7 @@
 package com.gem.timekeeper.screen.main.bestsurvey.form;
 
 import com.gem.timekeeper.data.dto.SurveyDTO;
-import com.gem.timekeeper.data.remote.callback.CommonCommandCallback;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gem.timekeeper.screen.model.SurveyBlockModel;
 import com.gemvietnam.base.viper.interfaces.IInteractor;
 import com.gemvietnam.base.viper.interfaces.IPresenter;
@@ -15,7 +15,7 @@ import java.util.List;
 interface BestSurveyFormContract {
 
   interface Interactor extends IInteractor<Presenter> {
-    void submitSurvey(int locationId, String submitted, String title, String surveyData, CommonCommandCallback callback);
+    void submitSurvey(int locationId, String submitted, String title, String surveyData, CommonCallback callback);
   }
 
   interface View extends PresentView<Presenter> {

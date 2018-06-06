@@ -2,8 +2,7 @@ package com.gem.timekeeper.data.remote.services;
 
 import com.gem.timekeeper.data.dto.CompleteSurveyListDTO;
 import com.gem.timekeeper.data.dto.SurveyListDTO;
-import com.gem.timekeeper.data.remote.callback.CommandResponse;
-import com.gem.timekeeper.data.remote.callback.SimpleQueryResponse;
+import com.gem.timekeeper.data.remote.callback.BaseResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -21,8 +20,8 @@ public interface SurveyService {
   String SERVICE_NAME = "";
 
   @GET("queries/Merit.Components.Surveys.Queries/SurveyQueries/GetBestSurveyTemplates/results")
-  Call<SimpleQueryResponse<SurveyListDTO>> getSurveyList(@Query("title") String filter);
+  Call<BaseResponse<SurveyListDTO>> getSurveyList(@Query("title") String filter);
 
   @POST("commands/Merit.Components.Surveys.Commands/CreateBestSurveyOnTabletCommand/publish")
-  Call<CommandResponse> submitSurvey(@Body CompleteSurveyListDTO completeSurveyList);
+  Call<BaseResponse> submitSurvey(@Body CompleteSurveyListDTO completeSurveyList);
 }

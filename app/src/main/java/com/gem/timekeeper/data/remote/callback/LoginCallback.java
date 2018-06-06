@@ -43,18 +43,6 @@ public abstract class LoginCallback implements Callback<UserDTO> {
     ResponseBody errorBody = response.errorBody();
     if (loginDTO != null) {
       onSuccess(loginDTO);
-    } else if (errorBody != null) {
-      try {
-        UserDTO.LoginErrorDTO loginErrorDTO = new Gson().fromJson(errorBody.string(), UserDTO.LoginErrorDTO.class);
-        if (loginErrorDTO != null) {
-          onError(loginErrorDTO.getError(), loginErrorDTO.getErrorDescription());
-        } else {
-          onError(SERVER_ERROR, getServerMsg());
-        }
-      } catch (IOException | JsonSyntaxException e) {
-        e.printStackTrace();
-        onError(SERVER_ERROR, getServerMsg());
-      }
     } else {
       onError(SERVER_ERROR, getServerMsg());
     }

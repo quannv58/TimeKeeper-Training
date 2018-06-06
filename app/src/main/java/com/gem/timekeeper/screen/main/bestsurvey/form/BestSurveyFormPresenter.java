@@ -6,8 +6,8 @@ import android.widget.Toast;
 import com.gem.timekeeper.R;
 import com.gem.timekeeper.data.dto.LocationDTO;
 import com.gem.timekeeper.data.dto.SurveyDTO;
-import com.gem.timekeeper.data.remote.callback.CommonCommandCallback;
-import com.gem.timekeeper.data.remote.callback.CommandResponse;
+import com.gem.timekeeper.data.remote.callback.BaseResponse;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gem.timekeeper.pref.PrefWrapper;
 import com.gem.timekeeper.realm.RealmController;
 import com.gem.timekeeper.screen.model.SurveyBlockModel;
@@ -68,9 +68,9 @@ public class BestSurveyFormPresenter extends Presenter<BestSurveyFormContract.Vi
       processOffline(locationId, submitted, surveyDTO.getTitle(), surveyData);
     } else{
       mView.showProgress();
-      mInteractor.submitSurvey(locationId, submitted, surveyDTO.getTitle(), surveyData, new CommonCommandCallback(getViewContext()) {
+      mInteractor.submitSurvey(locationId, submitted, surveyDTO.getTitle(), surveyData, new CommonCallback(getViewContext()) {
         @Override
-        protected void onSuccess(CommandResponse responseBody) {
+        protected void onSuccess(BaseResponse responseBody) {
           super.onSuccess(responseBody);
           CommonUtils.showToast(getViewContext(), R.string.survey_submit_success, Toast.LENGTH_LONG);
           back();

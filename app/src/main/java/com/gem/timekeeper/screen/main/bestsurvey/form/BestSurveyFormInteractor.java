@@ -2,7 +2,7 @@ package com.gem.timekeeper.screen.main.bestsurvey.form;
 
 import com.gem.timekeeper.data.dto.CompleteSurveyListDTO;
 import com.gem.timekeeper.data.remote.ServiceBuilder;
-import com.gem.timekeeper.data.remote.callback.CommonCommandCallback;
+import com.gem.timekeeper.data.remote.callback.CommonCallback;
 import com.gemvietnam.base.viper.Interactor;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ class BestSurveyFormInteractor extends Interactor<BestSurveyFormContract.Present
   }
 
   @Override
-  public void submitSurvey(int locationId, String submitted, String title, String surveyData, CommonCommandCallback callback) {
+  public void submitSurvey(int locationId, String submitted, String title, String surveyData, CommonCallback callback) {
     CompleteSurveyListDTO.CompleteSurveyDTO completeSurveyDTO =
         new CompleteSurveyListDTO.CompleteSurveyDTO.Builder()
             .setLocationId(locationId).setSubmitted(submitted)
